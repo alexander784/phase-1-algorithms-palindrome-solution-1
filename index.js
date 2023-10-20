@@ -1,14 +1,6 @@
+const { expect } = require("chai")
+
 function isPalindrome(abba) {
-  // Write your algorithm here
-    //reverse the input string
-    //if input is the same as reversed input 
-  //   if(word === reversedWord) {
-  //     return true
-  //   }else {
-  //     return false
-  //   }
-    
-  // }
   if(abba === abba){
     return true
   }else{    
@@ -21,9 +13,6 @@ function isPalindrome(abba) {
     return false
   }
 
-
-  
-
   if(robot === robot) {
     return false
   }else {
@@ -34,6 +23,36 @@ function isPalindrome(abba) {
   }else {
     return true
   }
+  // Write your algorithm here
+    //reverse the input string
+    //if input is the same as reversed input 
+  //   if(word === reversedWord) {
+  //     return true
+  //   }else {
+  //     return false
+  //   }
+    
+  // }
+
+  describe("isPalindrome", () => {
+    it("returns true for 'abba'", () => {
+      expect(isPalindrome("abba")).to.be.true;
+    });
+    it("return true for 'racecar'", () => {
+      expect(isPalindrome("racecar")).to.be.true;
+    });
+
+    it("return true for 'a'", () => {
+      expect(isPalindrome("a")).to.be.true;
+    });
+
+    it("returns false for 'robot'",).to.be.false;
+  });
+
+  it("returns false for 'ab'", ()=> {
+    expect(isPalindrome("ab")).to.be.false;
+  });
+  
 }
 
 /* 
